@@ -1,4 +1,4 @@
-# 🧚 Wisp Language Specification (v1)
+# 🧚 Wisp Language Specification (WIP-- pre-v1)
 
 ## ✨ Overview
 
@@ -26,7 +26,7 @@ User:
   name      string:min(1)
   email     string:email:min(5):max(50)
   ?age      int:min(0):max(27) :is(120) = 27 "uncool age bro"
-  height    int:all(:gt(100), :lt(300))
+  height    int:all(:min(100), :max(300))
   verified  boolean!:is(false) = true
 ```
 
@@ -61,7 +61,7 @@ User:
 :min(0):max(10)                 # AND
 :min(0)  :is(999)               # OR
 !:is(false)                     # NOT
-:all(:gt(5), :lt(10))           # ALL
+:all(:min(5), :max(10))           # ALL
 :any(:is("yes"), :is("y"))      # ANY
 ```
 

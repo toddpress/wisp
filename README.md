@@ -61,7 +61,7 @@ User:
 :min(0):max(10)                 # AND
 :min(0)  :is(999)               # OR
 !:is(false)                     # NOT
-:all(:gt(5), :lt(10))           # ALL
+:all(:min(5), :max(10))           # ALL
 :any(:is("yes"), :is("y"))      # ANY
 ```
 
